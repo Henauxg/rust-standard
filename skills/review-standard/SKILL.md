@@ -1,6 +1,7 @@
 ---
 name: review-standard
 description: Review Rust code against the Rust coding standard (the project's copy, or the one beside this skill), for a pull request, a branch, the working tree or a path. With the `fix` argument, fix what does not comply, in passes, until the code complies. Use when asked to review Rust changes against the standard, check compliance, or make code compliant.
+license: MIT, in LICENSE.txt
 ---
 
 # Review Rust code against the coding standard
@@ -78,9 +79,10 @@ Use quiet flags, so the output stays short. For each touched crate:
    cargo +nightly fmt -p <crate> -- --check --config-path <standard>/rustfmt.toml
    ```
 
-   If nightly rustfmt is missing, install it with
-   `rustup component add --toolchain nightly rustfmt`. If that fails, say that
-   formatting was not checked.
+   When the project's docs give another way to run nightly rustfmt, such as
+   `cargo fmt` in a dev shell, use it. If nightly rustfmt is missing, install
+   it with `rustup component add --toolchain nightly rustfmt`. If that fails,
+   say that formatting was not checked.
 
 2. **Lints:**
 

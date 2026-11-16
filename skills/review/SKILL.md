@@ -1,6 +1,7 @@
 ---
 name: review
 description: Review code for correctness, for a pull request, a branch, the working tree or a path. Does the code work, does it do what it must, does it handle edge cases and errors, can a user, a file or a network peer make it misbehave. With the `fix` argument, fix the bugs found, each with a test, in passes, until a pass finds none. Use when asked to review changes for bugs or security holes, check that code works, or find unhandled cases. Style and the coding standard are the review-standard skill's job.
+license: MIT, in LICENSE.txt
 ---
 
 # Review code for correctness

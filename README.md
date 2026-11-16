@@ -22,6 +22,9 @@ A coding standard for Rust, and three Claude Code skills that review code with i
 4. Add the lints that implementation.md lists under "Panics" to the workspace's `Cargo.toml`, as `[workspace.lints.clippy]`.
 5. Name the standard's folder in the project's `AGENTS.md` or `CLAUDE.md`, so that agents and the skills find it.
 
-## Attribution
+## License
 
-The standard is adapted from the [Google Rust Style Guide](https://google.github.io/styleguide/rustguide.html), by Google, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- The standard is under [CC BY 4.0](standard/LICENSE). It is adapted from the [Google Rust Style Guide](https://google.github.io/styleguide/rustguide.html), by Google, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+- The skills are under the MIT license, in each skill's `LICENSE.txt`.
+
+Each license file sits inside the folder it covers, so a copy of the folder keeps it.

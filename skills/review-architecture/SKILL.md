@@ -1,6 +1,7 @@
 ---
 name: review-architecture
 description: Evaluate a crate's architecture in depth, read cold, after many iterations have grown it. Does the structure still fit what the crate does, what consumes it and where it is going? Looks at boundaries and dependencies, where responsibilities sit, duplication, the data model, completeness, errors, state, performance by design, testability, readiness for the next step, and size. Confirms each finding on the running code, ranks them, proposes a plan, and discusses it with the user before anything changes. Use when asked for an architecture review, a deeper crate evaluation, or "did we get the architecture wrong". Bugs are the review skill's job, style the review-standard skill's.
+license: MIT, in LICENSE.txt
 ---
 
 # Review a crate's architecture

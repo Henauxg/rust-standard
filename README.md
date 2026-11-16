@@ -24,7 +24,7 @@ A coding standard for Rust, and three Claude Code skills that review code with i
 
 ## Copy or update
 
-Run these commands from the project's root, with a tag, a branch or a commit of this repository.
+Run these commands from the project's root, with a tag, a branch or a full commit hash of this repository.
 They work in sh and in PowerShell, and copy to the folders of step 1:
 
 ```sh

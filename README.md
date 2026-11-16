@@ -10,8 +10,8 @@ A coding standard for Rust, and three Claude Code skills that review code with i
 
 ## Use it in a project
 
-1. Copy `standard/` into the project, such as into `docs/standards/rust/`, and copy the folders of `skills/` into `.claude/skills/`.
-2. Copy `standard/rustfmt.toml` to the workspace root. Its settings need nightly rustfmt (`cargo +nightly fmt`). The code itself builds on stable Rust.
+1. Copy `standard/` into the project, such as into `docs/standards/rust/`, and copy the folders of `skills/` into `.claude/skills/`. The commands in "Copy or update" below do it.
+2. Copy `standard/rustfmt.toml` to the workspace root, or link to it. Its settings need nightly rustfmt (`cargo +nightly fmt`). The code itself builds on stable Rust.
 3. Point Clippy at `clippy.toml`, in `.cargo/config.toml`:
 
    ```toml
@@ -21,6 +21,23 @@ A coding standard for Rust, and three Claude Code skills that review code with i
 
 4. Add the lints that implementation.md lists under "Panics" to the workspace's `Cargo.toml`, as `[workspace.lints.clippy]`.
 5. Name the standard's folder in the project's `AGENTS.md` or `CLAUDE.md`, so that agents and the skills find it.
+
+## Copy or update
+
+Run these commands from the project's root, with a tag, a branch or a commit of this repository.
+They work in sh and in PowerShell, and copy to the folders of step 1:
+
+```sh
+git fetch https://github.com/Henauxg/rust-standard <ref>
+git rm -r -q -f --ignore-unmatch docs/standards/rust .claude/skills/review .claude/skills/review-standard .claude/skills/review-architecture
+git read-tree --prefix=docs/standards/rust/ -u FETCH_HEAD:standard
+git read-tree --prefix=.claude/skills/review/ -u FETCH_HEAD:skills/review
+git read-tree --prefix=.claude/skills/review-standard/ -u FETCH_HEAD:skills/review-standard
+git read-tree --prefix=.claude/skills/review-architecture/ -u FETCH_HEAD:skills/review-architecture
+```
+
+The copy is staged, ready to commit.
+The next update replaces the copy whole, so make a change in this repository first.
 
 ## License
 

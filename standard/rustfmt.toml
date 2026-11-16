@@ -1,0 +1,5 @@
+# The standard's rustfmt settings (organization.md, Formatting). Needs nightly rustfmt.
+max_width = 100
+hex_literal_case = "Lower"
+format_macro_matchers = true
+imports_granularity = "Module"
